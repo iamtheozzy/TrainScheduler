@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- My CSS File -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <title>Train Schedules</title>
+  </head>
+  <body>
+
+    <!-- Whole Page Container-->
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div id="jumbotron" class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+          <h1 class="display-4">Train Schedules</h1>
+          <p class="lead">Check out your train time!</p>
+        </div>
+      </div>
+      <!-- Jumbotron (End) -->
+
+
+      <!-- Current Train Schedule Table -->
+      <div class="card">
+        <h5 class="card-header">Current Train Schedule</h5>
+        <div class="table-responsive">
+          <table class="table" id="train-table">
+            <thead>
+              <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (mins)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Current Train Schedule Table (End) -->
+
+
+      <!-- Add Train Entry Form -->
+      <div class="card" id="addTrainCard">
+        <h5 class="card-header">Add Train</h5>
+        <div class="card-body">
+          <form>
+
+            <!-- Train Name Input -->
+            <div class="form-group">
+              <label for="train-name-input">Train Name</label>
+              <input type="text" class="form-control" id="train-name-input">
+            </div>
+
+            <!-- Destination Input -->
+            <div class="form-group">
+              <label for="destination-input">Destination</label>
+              <input type="text" class="form-control" id="destination-input">
+            </div>
+
+            <!-- First Train Time Input -->
+            <div class="form-group">
+              <label for="first-train-input">First Train Time (HH:mm - 24 hour time)</label>
+              <input type="text" class="form-control" id="first-train-input">
+            </div>
+
+            <!-- Frequency Input -->
+            <div class="form-group">
+              <label for="frequency-input">Frequency (mins)</label>
+              <input type="text" class="form-control" id="frequency-input">
+            </div>
+
+            <!-- Add Button -->
+            <button type="button" class="btn btn-dark" id="add-train-btn"> Add</button>
+
+          </form>
+        </div>
+      </div>
+      <!-- Add Train Entry Form (End) -->
+
+    </div>
+    <!-- Whole Page Container (End) -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
+
+    <!-- Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+</html>
